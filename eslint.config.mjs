@@ -21,13 +21,14 @@ export default [
         "no-unused-vars": "error",
         "no-undef": "error",
         "prefer-const": "error",
-        semi: "error"
+        semi: "error",
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     }
   },
   {
     linterOptions: {
         reportUnusedDisableDirectives: "error"
-    }
+    },
 },
   jest.configs['flat/recommended'],
 ];
