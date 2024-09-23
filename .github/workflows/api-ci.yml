@@ -33,7 +33,22 @@ jobs:
         run: |
           cd api
           npm test
-      - name: 🌹 ESLint
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Setup Nodejs v4
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: |
+          cd api
+          npm install
+      - name: Run lint
         run: |
           cd api
           npm run lint
